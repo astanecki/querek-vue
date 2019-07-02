@@ -1,0 +1,7 @@
+www
+.idea
+builds
+*.apk
+*.ipa
+npm-debug.*
+node_modules/*
