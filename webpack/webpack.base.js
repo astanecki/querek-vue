@@ -81,6 +81,15 @@ const webpackConfig = {
                 test: /\.md$/,
                 loader: 'ignore-loader',
             },
+            {
+                test: /\.svg$/,
+                loader: 'vue-svg-loader',
+                options: {
+                    svgo: {
+                        plugins: [{ removeViewBox: false }],
+                    },
+                },
+            },
         ],
     },
 

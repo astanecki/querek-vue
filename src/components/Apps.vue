@@ -1,7 +1,15 @@
 <template>
     <div class="apps">
         <EmptyCard />
-        {{apps}}
+        <AppCard
+            v-for="app in apps"
+            :title="app.title"
+            :description="app.description"
+            :version="app.version"
+            :platforms="app.platforms"
+            :date="app.date"
+            :type="app.type"
+        />
     </div>
 </template>
 
@@ -9,12 +17,14 @@
     import { mapActions, mapState } from 'vuex';
     import { FETCH_APPS } from '@src/store/modules/apps/actions/apps.actions';
     import EmptyCard from './EmptyCard';
+    import AppCard from './AppCard';
 
     export default {
         name: "Apps",
 
         components: {
-            EmptyCard
+            EmptyCard,
+            AppCard
         },
 
         computed: {
@@ -22,8 +32,6 @@
         },
 
         mounted() {
-            console.log(`mounted`,);
-
             this.fetchApps();
         },
 
@@ -37,6 +45,7 @@
 
 <style lang="scss" scoped>
     .apps {
+        display: flex;
         flex: 0 0 80%;
         padding: 10px;
 

@@ -1,18 +1,18 @@
-export const FETCH_APPS = 'fetchApps';
+import axios from 'axios';
 import { SET_APS } from '../mutations/apps.mutations';
+import CONFIG from '@src/config/config';
+
+export const FETCH_APPS = 'fetchApps';
 
 export default {
     [FETCH_APPS]({ commit }) {
-        console.log(`fetch apps`);
-
-        commit(SET_APS, [
-            {
-                id: 1,
-                name: 'aaa'
-            }, {
-                id: 2,
-                name: 'bbb'
-            }
-        ]);
+        return axios
+            .get(`${CONFIG.NETWORK.SERVER_IP}/applications`)
+            .then(({ data: { release, developer }}) => {
+                commit(SET_APS, release);
+            })
+            .catch(error => {
+                console.log(`error`, error);
+            });
     }
 }

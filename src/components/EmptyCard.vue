@@ -17,7 +17,7 @@
         flex-direction: column;
 
         width: 250px;
-        height: 100px;
+        height: 200px;
         background-color: #34495e;
         color: white;
 

@@ -28,7 +28,8 @@
         padding: 10px 0;
 
         background-color: #ecf0f1;
-        border: 1px solid #bdc3c7;
+        border-top: 1px solid #bdc3c7;
+        border-bottom: 1px solid #bdc3c7;
 
         &__logo {
             padding-left: 10px;
