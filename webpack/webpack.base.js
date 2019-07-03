@@ -40,7 +40,7 @@ const webpackConfig = {
                 loader: 'vue-loader',
             },
             {
-                test: /\.scss$/,
+                test: /\.s(a|c)ss$/,
                 include: [path.join(sourceDir)],
                 use: [
                     {
@@ -50,7 +50,9 @@ const webpackConfig = {
                         loader: 'css-loader',
                         options: { url: false },
                     },
-                    'postcss-loader',
+                    {
+                        loader: 'postcss-loader',
+                    },
                     {
                         loader: 'sass-loader',
                         options: {
@@ -58,6 +60,10 @@ const webpackConfig = {
                         },
                     },
                 ],
+            },
+            {
+                test: /\.css$/,
+                loader: 'css-loader',
             },
             {
                 test: /\.(gif|png|jpe?g)$/i,
