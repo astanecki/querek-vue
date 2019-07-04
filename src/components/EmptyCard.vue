@@ -1,6 +1,7 @@
 <template>
     <div class="empty-card">
-        <span class="empty-card__name">Add application</span>
+        <span class="empty-card__name">New</span>
+        <span class="empty-card__date">today</span>
         <div class="empty-card__add-app">+</div>
     </div>
 </template>
@@ -22,7 +23,7 @@
         color: white;
 
         margin: 5px;
-        padding: 5px;
+        padding: 10px;
 
         &__add-app {
             display: flex;
@@ -34,6 +35,11 @@
             &:hover {
                 cursor: pointer;
             }
+        }
+
+        &__date {
+            font-size: 13px;
+            color: gray;
         }
     }
 </style>

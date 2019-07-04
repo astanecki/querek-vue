@@ -14,32 +14,25 @@
 </template>
 
 <script>
-    import { mapActions, mapState } from 'vuex';
-    import { FETCH_APPS } from '@src/store/modules/apps/actions/apps.actions';
+    // import { mapActions, mapState } from 'vuex';
+    // import { FETCH_APPS, FIND_APP } from '@src/store/modules/apps/actions/apps.actions';
     import EmptyCard from './EmptyCard';
     import AppCard from './AppCard';
 
     export default {
         name: "Apps",
 
+        props: {
+            apps: {
+                type: Array,
+                required: true
+            }
+        },
+
         components: {
             EmptyCard,
             AppCard
         },
-
-        computed: {
-            ...mapState('apps', ['apps'])
-        },
-
-        mounted() {
-            this.fetchApps();
-        },
-
-        methods: {
-            ...mapActions('apps', {
-                fetchApps: FETCH_APPS
-            })
-        }
     }
 </script>
 

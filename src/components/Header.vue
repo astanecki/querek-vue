@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header__logo">{{ name }}</div>
         <div class="header__search">
-            <input v-model="inputValue" class="header__input" />
+            <input v-model="inputValue" @input="emitInput" class="header__input" />
         </div>
     </div>
 </template>
@@ -14,6 +14,15 @@
                 inputValue: ''
             }
         },
+
+        methods: {
+            /**
+             * @function
+             */
+            emitInput() {
+                this.$emit(`search`, this.inputValue);
+            }
+        }
     }
 </script>
 <style lang="scss" scoped>

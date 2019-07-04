@@ -6,5 +6,16 @@ module.exports = {
     SUPPORTED_APPS: {
         FITATU: 'fitatu',
         HOLIA: 'holia'
+    },
+
+    SUPPORTED_PLATFORMS: {
+        ANDROID: {
+            NAME: 'android',
+            APP_EXTENSION: 'apk'
+        },
+        IOS: {
+            NAME: 'ios',
+            APP_EXTENSION: 'ipk'
+        }
     }
 };

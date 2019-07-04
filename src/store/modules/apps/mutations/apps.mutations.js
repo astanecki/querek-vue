@@ -1,4 +1,6 @@
-export const SET_APS = 'setApps';
+export const SET_APPS = 'setApps';
+
+export const SET_FILTERED_APPS = 'setFilteredApps';
 
 export default {
     /**
@@ -6,7 +8,11 @@ export default {
      * @param {Object} state
      * @param {Array} apps
      */
-    [SET_APS](state, apps) {
+    [SET_APPS](state, apps) {
         state.apps = apps;
-    }
+    },
+
+    [SET_FILTERED_APPS](state, apps) {
+        state.filteredApps = apps;
+    },
 }
