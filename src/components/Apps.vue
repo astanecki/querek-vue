@@ -14,14 +14,10 @@
 </template>
 
 <script>
-    // import { mapActions, mapState } from 'vuex';
-    // import { FETCH_APPS, FIND_APP } from '@src/store/modules/apps/actions/apps.actions';
     import EmptyCard from './EmptyCard';
     import AppCard from './AppCard';
 
     export default {
-        name: "Apps",
-
         props: {
             apps: {
                 type: Array,

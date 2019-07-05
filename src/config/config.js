@@ -15,7 +15,7 @@ module.exports = {
         },
         IOS: {
             NAME: 'ios',
-            APP_EXTENSION: 'ipk'
+            APP_EXTENSION: 'ipa'
         }
     }
 };

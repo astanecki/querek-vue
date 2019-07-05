@@ -3,11 +3,6 @@
         ©2019 — Querek
     </div>
 </template>
-<script>
-    export default {
-        name: "Footer",
-    }
-</script>
 <style lang="scss" scoped>
     .footer {
         width: 100%;

@@ -12,6 +12,11 @@ export default {
         state.apps = apps;
     },
 
+    /**
+     * @function
+     * @param {Object} state
+     * @param {Array.<Object>} apps
+     */
     [SET_FILTERED_APPS](state, apps) {
         state.filteredApps = apps;
     },
