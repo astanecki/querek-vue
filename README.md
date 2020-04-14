@@ -4,14 +4,24 @@ This app gives you possibility to distribute your app over the air. That means, 
 
 How to run
 -  
-- Init submodule with server 
-> git submodule init
-- Update submodule 
-> git submodule update
-- Start mongodb from submodule as admin
-> ./scripts/mongodb
-- Start server from package.json
-> npm run server 
-- Start web app 
-> npm run web 
-- Upload & install apps 
+ Init submodule with server 
+```
+git submodule init
+```
+Update submodule 
+``` 
+git submodule update
+```
+Start mongodb from submodule as admin
+```
+./scripts/mongodb
+```
+Start server from package.json
+```
+npm run server
+```
+Start web app
+```
+npm run web
+```  
+Upload & install apps 
