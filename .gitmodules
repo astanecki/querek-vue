@@ -1,0 +1,3 @@
+[submodule "querek-server"]
+	path = querek-server
+	url = git@github.com:astanecki/querek-server.git
