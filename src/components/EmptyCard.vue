@@ -5,13 +5,6 @@
         <div class="empty-card__add-app">+</div>
     </div>
 </template>
-
-<script>
-    export default {
-        name: "emptyCard"
-    }
-</script>
-
 <style lang="scss" scoped>
     .empty-card {
         display: flex;
