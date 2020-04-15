@@ -1,4 +1,4 @@
-# querek - installing signed application without using official store
+# querek - installing signed mobile application without using official store
 
 This app gives you possibility to distribute your app over the air. That means, you can share it in non-market manner for you and your friends in the team. Just scan QR code and install Android & iOS app directly from URL.
 
@@ -14,7 +14,7 @@ git submodule update
 ```
 Start mongodb from submodule as admin
 ```
-./scripts/mongodb
+.querek-server/scripts/mongodb
 ```
 Start server from package.json
 ```
