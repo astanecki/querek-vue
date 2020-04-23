@@ -1,8 +1,15 @@
 <template>
     <div class="header">
-        <div class="header__logo">{{ name }}</div>
+        <div class="header__logo">
+            {{ name }} <span class="header__version">{{ version }}</span>
+        </div>
         <div class="header__search">
-            <input v-model="inputValue" @input="emitInput" class="header__input" />
+            <input
+                v-model="inputValue"
+                @input="emitInput"
+                class="header__input"
+                :placeholder="placeholder"
+            />
         </div>
     </div>
 </template>
@@ -11,7 +18,9 @@
         data() {
             return {
                 name: 'Querek',
-                inputValue: ''
+                version: '0.0.1', // todo read from package.json
+                inputValue: '',
+                placeholder: 'Szukaj po nazwie'
             }
         },
 
@@ -42,8 +51,12 @@
 
         &__logo {
             padding-left: 10px;
-            font-size: 25px;
+            font-size: 35px;
             color: #34495e;
+        }
+
+        &__version {
+            font-size: 20px;
         }
 
         &__search {
@@ -53,8 +66,10 @@
 
         &__input {
             width: 170px;
-            height: 20px;
+            height: 30px;
             border: 1px solid lightgray;
+            padding: 4px 4px 4px 15px;
+            border-radius: 20px;
         }
     }
 </style>

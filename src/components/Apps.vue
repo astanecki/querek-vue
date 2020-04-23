@@ -1,6 +1,6 @@
 <template>
     <div class="apps">
-        <EmptyCard />
+        <EmptyCard @click.native="onEmptyCardClicked" />
         <AppCard
             v-for="app in apps"
             :title="app.title"
@@ -29,6 +29,16 @@
             EmptyCard,
             AppCard
         },
+        
+        methods: {
+            /**
+             * @function
+             */
+            onEmptyCardClicked() {
+                console.log(`onEmptyCardClicked`);
+                // todo show modal
+            }
+        }
     }
 </script>
 
