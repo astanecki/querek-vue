@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "6"
+  - "8.10.0"
 script:
   - npm test
 # Handle git submodules yourself
