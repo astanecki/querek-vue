@@ -32,7 +32,11 @@ const webpackConfig = {
                 options: {
                     presets: ["@babel/preset-env"],
                     babelrc: false,
-                    plugins: ['transform-object-rest-spread', 'syntax-dynamic-import'],
+                    plugins: [
+                        'transform-object-rest-spread',
+                        'syntax-dynamic-import',
+                        '@babel/plugin-syntax-dynamic-import'
+                    ],
                 },
             },
             {
